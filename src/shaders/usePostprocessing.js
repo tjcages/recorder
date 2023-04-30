@@ -6,7 +6,7 @@ import { EffectComposer, RenderPass, EffectPass, DepthOfFieldEffect, SavePass } 
 export default function usePostprocessing(scene, camera, extra = []) {
   const { gl } = useThree()
   const [composer, props] = useMemo(() => {
-    const parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBFormat, encoding: gl.outputEncoding }
+    const parameters = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, encoding: gl.outputEncoding }
     const renderTarget = new THREE.WebGLRenderTarget(800, 800, parameters)
 
     const composer = new EffectComposer(null)
