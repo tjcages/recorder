@@ -9,7 +9,7 @@ import './shaders/materials/ScreenMaterial'
 function Button(props) {
   const { nodes, materials } = useGLTF('/arc-draco.glb')
   const [hovered, setHovered] = useState(false)
-  useEffect(() => (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
+  // useEffect(() => (document.body.style.cursor = hovered ? 'pointer' : 'auto'), [hovered])
   return (
     <mesh
       onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
